@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Read a zip file (demo zip.js)</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="default.css">
+	<link rel="stylesheet" href="demo.css">
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web" rel="stylesheet"
+		type="text/css">
+		<!-- <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"> -->
+	<!-- <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"> -->
+	
+
+</head>
+
+<body>
+	<div class="zip">
+		<h1>
+			<img class="zip-image" src="https://www.cedarville.edu/images/default-source/insights/zip-file-icon.jpg?sfvrsn=d34468_0" alt="zip-image">
+			<a href="../">Zip-Extractor</a> <span class="small"></span>
+		</h1>
+	</div>
+	
+	<div id="container">
+		<div class="description">
+			A JavaScript library to zip and unzip files
+		</div>
+
+		<ol id="demo-container">
+			<li>
+				<label>
+					<button id="file-input-button">Choose a zip file</button>
+					<input type="file" id="file-input" accept="application/zip" hidden>
+				</label>
+			</li>
+			<li style="display: none;" id="encoding-item">
+				<label>
+					<span class="form-label">select the encoding of names</span>
+					<select id="encoding-input" disabled>
+						<option>utf-8</option>
+					
+					</select>
+				</label>
+			</li>
+			<li style="display: none;">
+				<label >
+					<span class="form-label">set the password</span>
+					<input type="password" id="password-input" value="" disabled>
+				</label>
+			</li>
+			<li>
+				<label>
+					<span class="form-label download">download uncompressed files</span>
+					<ul id="file-list" class="empty">
+					</ul>
+				</label>
+			</li>
+		</ol>
+
+	</div>
+	<script type="text/javascript" src="lib/zip.min.js"></script>
+	<script type="text/javascript" src="demo-read-file.js"></script>
+</body>
+
+</html>

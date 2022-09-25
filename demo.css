@@ -1,0 +1,212 @@
+#container {
+	width: 800px;
+}
+
+#demo-container li {
+	min-height: 60px;
+}
+.navbar ul li
+{
+	display: inline-block;
+	
+}
+
+#file-list {
+	width: 200px;
+	padding-left: 10px;
+	padding-top: 12px;
+	font-family: 'Droid Sans Mono', courier;
+	white-space: nowrap;
+	min-height: 50px;
+	margin-bottom: 25px;
+}
+
+input[type=text], input[type=password], button, select, #file-list {
+	flex-grow: 1;
+	font-size: 12pt;
+	padding: 4px;
+	border: solid 1px #a7a7a7;
+	border-radius: 2.5px;
+	box-shadow: 1px 1px 1px #d8d8d8;
+	color: #444444;
+}
+
+#download-button[disabled] {
+	cursor: not-allowed;
+}
+
+#file-list.empty {
+	min-height: 25px;
+}
+
+#file-list li {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: relative;
+	font-size: 11pt;
+	margin: .5em;
+	min-height: 35px;
+}
+
+#file-list li.pending {
+	color: #b1b1b1;
+}
+
+#file-list li.busy {
+	font-style: italic;
+}
+
+#file-list li.busy progress {
+	visibility: visible;
+}
+
+#file-list .filename-container {
+	display: flex;
+}
+
+#file-list .filename {
+	text-overflow: ellipsis;
+    overflow: hidden;
+	flex: 1;
+    margin-bottom: 8px;
+}
+
+#file-list .filename-container button {
+	display: none;
+	flex: 0;
+    font-size: 9px;
+    margin: 0;
+    padding: 3px;
+	padding-right: 4px;
+    height: 12px;
+	margin-left: 8px;	
+}
+.zip-image
+{
+	width: 50px;
+}
+.zip
+{
+	text-align: center;
+}
+#file-list .busy .filename-container button {
+	display: block;
+}
+
+.form-label {
+	width: 10rem;
+	margin-top: 10px;
+	margin-right: 8px;
+	background-color: #262626;
+}
+.download
+{
+	height: 2rem;
+	margin-bottom:2rem;
+	padding: 20px;
+
+}
+#demo-container {
+	margin-right: 10px;
+}
+
+input[type=text], input[type=password] {
+	height: 21px;
+}
+
+label {
+	display: flex;
+}
+#file-input-button
+{
+		background: #2962ff;
+		background-image: -webkit-linear-gradient(top, #2962ff, #2980b9);
+		background-image: -moz-linear-gradient(top, #2962ff, #2980b9);
+		background-image: -ms-linear-gradient(top, #2962ff, #2980b9);
+		background-image: -o-linear-gradient(top, #2962ff, #2980b9);
+		background-image: linear-gradient(to bottom, #2962ff, #2980b9);
+		-webkit-border-radius: 7;
+		-moz-border-radius: 7;
+		border-radius: 7px;
+		font-family: Georgia;
+		color: #ffffff;
+		font-size: 17px;
+		padding: 20px 30px 20px 30px;
+		text-decoration: none;
+	  }
+#file-input-button:hover
+{
+		background: #3cb0fd;
+		background-image: -webkit-linear-gradient(top, #3cb0fd, #1e6da1);
+		background-image: -moz-linear-gradient(top, #3cb0fd, #1e6da1);
+		background-image: -ms-linear-gradient(top, #3cb0fd, #1e6da1);
+		background-image: -o-linear-gradient(top, #3cb0fd, #1e6da1);
+		background-image: linear-gradient(to bottom, #3cb0fd, #1e6da1);
+		text-decoration: none;
+}
+
+input[type=text], input[type=password], button, select {
+	box-sizing: content-box;
+	height: 25px;
+	text-align: center;
+	outline-color: #c1c1c1;
+	background-color: #ececec;
+}
+
+select {
+	text-align-last: center;
+}
+
+input[type=text]:hover, input[type=password]:hover, button:hover, select:hover {
+	background-color: #e4e4e4;
+}
+
+input[type=text][disabled], input[type=password][disabled], button[disabled], select[disabled] {
+	opacity: .5;
+	background-color: transparent;
+}
+
+button:not([disabled]), select:not([disabled]) {
+	cursor: pointer;
+}
+
+progress {
+	visibility: hidden;
+	display: block;
+	opacity: .7;
+	width: 100%;
+	height: 8px;
+	margin-top: -2px;
+}
+
+@media (max-width: 680px) {
+	label {
+		flex-direction: column;
+	}
+	.form-label {
+		min-width: 190px;
+		margin-bottom: 8px;
+	}
+	#demo-container {
+		margin-right: 0;
+	}
+	#demo-container>li {
+		min-height: 80px;
+	}
+	ol {
+		padding-left: 0;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	input[type="text"], input[type="password"], button, select {
+		background-color: #353535;
+	}
+	input[type="text"], input[type="password"], button, select, #file-list {
+		color: whitesmoke;
+	}
+	input[type="text"]:hover, input[type="password"]:hover, button:hover, select:hover {
+		background-color: #262626;
+	}
+}
